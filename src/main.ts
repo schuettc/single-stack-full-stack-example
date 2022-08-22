@@ -1,15 +1,22 @@
-import { App, Stack, StackProps } from 'aws-cdk-lib';
+import { App, Stack, StackProps, CfnOutput } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
+import { Site, Infrastructure } from './index';
 
-export class MyStack extends Stack {
+export class SingleStackFullStack extends Stack {
   constructor(scope: Construct, id: string, props: StackProps = {}) {
     super(scope, id, props);
+    const infrastructure = new Infrastructure(this, 'infrastructure');
 
-    // define resources here...
+    const site = new Site(this, 'Site', { apiUrl: infrastructure.apiUrl });
+
+    new CfnOutput(this, 'apiUrl', { value: infrastructure.apiUrl });
+    new CfnOutput(this, 'distribution', {
+      value: site.distribution.domainName,
+    });
+
+    new CfnOutput(this, 'siteBucket', { value: site.siteBucket.bucketName });
   }
 }
-
-// for development, use account/region from cdk cli
 const devEnv = {
   account: process.env.CDK_DEFAULT_ACCOUNT,
   region: process.env.CDK_DEFAULT_REGION,
@@ -17,7 +24,8 @@ const devEnv = {
 
 const app = new App();
 
-new MyStack(app, 'single-stack-full-stack-example-dev', { env: devEnv });
-// new MyStack(app, 'single-stack-full-stack-example-prod', { env: prodEnv });
+new SingleStackFullStack(app, 'single-stack-full-stack-example-dev', {
+  env: devEnv,
+});
 
 app.synth();
