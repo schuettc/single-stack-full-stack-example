@@ -376,7 +376,7 @@ Object {
           "S3Bucket": Object {
             "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
           },
-          "S3Key": "731f24951dbe4e08bfc519dd7c23a4f7158528bd5557e38437b08292ab2a873c.zip",
+          "S3Key": "c409e6c5845f1f349df8cd84e160bf6f1c35d2b060b63e1f032f9bd39d4542cc.zip",
         },
         "Description": "/opt/awscli/aws",
       },
@@ -975,7 +975,7 @@ Object {
           "S3Bucket": Object {
             "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
           },
-          "S3Key": "e28dd6835e84f46cd3444d6e28da1e9d6743666b0488fd9a8d608f95490a2083.zip",
+          "S3Key": "dc72388c29508d63e567af3d23fb1fadfedd09cd75fc05f3caa14eddc54f5568.zip",
         },
         "Environment": Object {
           "Variables": Object {
