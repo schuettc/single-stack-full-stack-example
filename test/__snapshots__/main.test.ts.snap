@@ -410,6 +410,7 @@ Object {
           },
         ],
         "SourceMarkers": Array [
+          Object {},
           Object {
             "<<marker:0xbaba:0>>": Object {
               "Ref": "infrastructureexampleAPI5A9FDF24",
@@ -974,7 +975,7 @@ Object {
           "S3Bucket": Object {
             "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
           },
-          "S3Key": "4923154a8cb44adc39d58f8189b201bba9c2dde6fb6bf024eeda3737260658ad.zip",
+          "S3Key": "5d2af6d22575991773b6416cfb3594c2a39c1df1d642e1c417627e57286b2a14.zip",
         },
         "Environment": Object {
           "Variables": Object {
