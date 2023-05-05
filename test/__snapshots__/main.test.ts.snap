@@ -192,6 +192,11 @@ Object {
           },
           "S3Key": "9eb41a5505d37607ac419321497a4f8c21cf0ee1f9b4a6b29aa04301aea5c7fd.zip",
         },
+        "Environment": Object {
+          "Variables": Object {
+            "AWS_CA_BUNDLE": "/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem",
+          },
+        },
         "Handler": "index.handler",
         "Layers": Array [
           Object {
@@ -351,7 +356,7 @@ Object {
           "S3Bucket": Object {
             "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
           },
-          "S3Key": "40aa87cdf43c4095cec18bc443965f22ab2f8c1ace47e482a0ba4e35d83b0cc9.zip",
+          "S3Key": "350185a1069fa20a23a583e20c77f6844218bd73097902362dc94f1a108f5d89.zip",
         },
         "Description": Object {
           "Fn::Join": Array [
@@ -1085,7 +1090,7 @@ Object {
           "S3Bucket": Object {
             "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
           },
-          "S3Key": "fd6687c8264be2b30c06703eac8adf926837f53ea406ef5c3feb874004caf8d4.zip",
+          "S3Key": "bfd365091025bcdc345a1900b37dd15a4ce4891677d44f1979ba071d45de8458.zip",
         },
         "Environment": Object {
           "Variables": Object {
