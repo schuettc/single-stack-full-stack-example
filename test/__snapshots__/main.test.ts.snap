@@ -722,7 +722,7 @@ Object {
       "Type": "AWS::IAM::Role",
       "UpdateReplacePolicy": "Retain",
     },
-    "infrastructureexampleAPIDeployment35A3D778c2585619f83c2d31cff7824b55d01469": Object {
+    "infrastructureexampleAPIDeployment35A3D7786aa94ea0147019c71fab1d6b287dda15": Object {
       "DependsOn": Array [
         "infrastructureexampleAPIexampleOPTIONSA419ECDC",
         "infrastructureexampleAPIexamplePOST45BFD7CC",
@@ -743,7 +743,7 @@ Object {
       ],
       "Properties": Object {
         "DeploymentId": Object {
-          "Ref": "infrastructureexampleAPIDeployment35A3D778c2585619f83c2d31cff7824b55d01469",
+          "Ref": "infrastructureexampleAPIDeployment35A3D7786aa94ea0147019c71fab1d6b287dda15",
         },
         "MethodSettings": Array [
           Object {
@@ -762,6 +762,7 @@ Object {
     },
     "infrastructureexampleAPIOPTIONSF9FCD477": Object {
       "Properties": Object {
+        "ApiKeyRequired": false,
         "AuthorizationType": "NONE",
         "HttpMethod": "OPTIONS",
         "Integration": Object {
@@ -821,6 +822,7 @@ Object {
     },
     "infrastructureexampleAPIexampleOPTIONSA419ECDC": Object {
       "Properties": Object {
+        "ApiKeyRequired": false,
         "AuthorizationType": "NONE",
         "HttpMethod": "OPTIONS",
         "Integration": Object {
@@ -1090,7 +1092,7 @@ Object {
           "S3Bucket": Object {
             "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
           },
-          "S3Key": "795e50fc1507f158d17763568084055316c616800ef87cba51660e6d5ce63272.zip",
+          "S3Key": "0cafc9600a5cb167d2eae4be846cd886cf06924858be079d3df15d8adbc6a3bb.zip",
         },
         "Environment": Object {
           "Variables": Object {
