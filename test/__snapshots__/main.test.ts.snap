@@ -87,7 +87,12 @@ Object {
           "S3Bucket": Object {
             "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
           },
-          "S3Key": "2bc265c5e0569aeb24a6349c15bd54e76e845892376515e036627ab0cc70bb64.zip",
+          "S3Key": "9eb41a5505d37607ac419321497a4f8c21cf0ee1f9b4a6b29aa04301aea5c7fd.zip",
+        },
+        "Environment": Object {
+          "Variables": Object {
+            "AWS_CA_BUNDLE": "/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem",
+          },
         },
         "Handler": "index.handler",
         "Layers": Array [
@@ -248,7 +253,7 @@ Object {
           "S3Bucket": Object {
             "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
           },
-          "S3Key": "3f51abb709b8e65167a45aeed02bab11540603d909005d7148230ba5ce6c74d7.zip",
+          "S3Key": "b7f33614a69548d6bafe224d751a7ef238cde19097415e553fe8b63a4c8fd8a6.zip",
         },
         "Description": Object {
           "Fn::Join": Array [
@@ -262,7 +267,7 @@ Object {
             ],
           ],
         },
-        "Handler": "__entrypoint__.handler",
+        "Handler": "index.handler",
         "MemorySize": 128,
         "Role": Object {
           "Fn::GetAtt": Array [
@@ -270,7 +275,7 @@ Object {
             "Arn",
           ],
         },
-        "Runtime": "nodejs14.x",
+        "Runtime": "nodejs18.x",
         "Timeout": 900,
       },
       "Type": "AWS::Lambda::Function",
@@ -358,6 +363,13 @@ Object {
             },
           ],
         },
+        "OwnershipControls": Object {
+          "Rules": Array [
+            Object {
+              "ObjectOwnership": "ObjectWriter",
+            },
+          ],
+        },
       },
       "Type": "AWS::S3::Bucket",
       "UpdateReplacePolicy": "Retain",
@@ -376,7 +388,7 @@ Object {
           "S3Bucket": Object {
             "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
           },
-          "S3Key": "5d8d1d0aacea23824c62f362e1e3c14b7dd14a31c71b53bfae4d14a6373c5510.zip",
+          "S3Key": "e2277687077a2abf9ae1af1cc9565e6715e2ebb62f79ec53aa75a1af9298f642.zip",
         },
         "Description": "/opt/awscli/aws",
       },
@@ -427,7 +439,7 @@ Object {
           },
         ],
         "SourceObjectKeys": Array [
-          "dfb8b3c57f0066329ea1b46180b8339e68fa1e2c65e160bfa92b48f4e6e603ac.zip",
+          "82bc93eb0987d6dee09f0e17ccb55b92997465fafdc481f2178d353ed0f8baf9.zip",
           "54db0af5da74dab89a93c249167c5b162223925d4c9385ff9262a09b67c99244.zip",
         ],
       },
@@ -479,6 +491,7 @@ Object {
           "Statement": Array [
             Object {
               "Action": Array [
+                "s3:PutBucketPolicy",
                 "s3:GetBucket*",
                 "s3:List*",
                 "s3:DeleteObject*",
@@ -607,7 +620,7 @@ Object {
       "Type": "AWS::IAM::Role",
       "UpdateReplacePolicy": "Retain",
     },
-    "infrastructureexampleAPIDeployment35A3D778c2585619f83c2d31cff7824b55d01469": Object {
+    "infrastructureexampleAPIDeployment35A3D7786aa94ea0147019c71fab1d6b287dda15": Object {
       "DependsOn": Array [
         "infrastructureexampleAPIexampleOPTIONSA419ECDC",
         "infrastructureexampleAPIexamplePOST45BFD7CC",
@@ -628,7 +641,7 @@ Object {
       ],
       "Properties": Object {
         "DeploymentId": Object {
-          "Ref": "infrastructureexampleAPIDeployment35A3D778c2585619f83c2d31cff7824b55d01469",
+          "Ref": "infrastructureexampleAPIDeployment35A3D7786aa94ea0147019c71fab1d6b287dda15",
         },
         "MethodSettings": Array [
           Object {
@@ -647,6 +660,7 @@ Object {
     },
     "infrastructureexampleAPIOPTIONSF9FCD477": Object {
       "Properties": Object {
+        "ApiKeyRequired": false,
         "AuthorizationType": "NONE",
         "HttpMethod": "OPTIONS",
         "Integration": Object {
@@ -706,6 +720,7 @@ Object {
     },
     "infrastructureexampleAPIexampleOPTIONSA419ECDC": Object {
       "Properties": Object {
+        "ApiKeyRequired": false,
         "AuthorizationType": "NONE",
         "HttpMethod": "OPTIONS",
         "Integration": Object {
@@ -975,7 +990,7 @@ Object {
           "S3Bucket": Object {
             "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
           },
-          "S3Key": "61726f359c9d35361cb9239c87f411bbd73a7e1299eca9e9ca2be447693c2482.zip",
+          "S3Key": "b4aa2f9f65143032e1123d6fbf263af893a8116b9ac56960902595e2d0ced8a6.zip",
         },
         "Environment": Object {
           "Variables": Object {

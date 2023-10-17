@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import NorthStarThemeProvider from 'aws-northstar/components/NorthStarThemeProvider';
-import Header from 'aws-northstar/components/Header';
-import './App.css';
+import { ContentLayout, Container, Header, SpaceBetween } from '@cloudscape-design/components';
+import '@cloudscape-design/global-styles/index.css';
 import { AmplifyConfig as config } from './Config';
 import { Amplify, API } from 'aws-amplify';
 import '@aws-amplify/ui-react/styles.css';
@@ -22,10 +21,17 @@ const App = () => {
     }, []);
 
     return (
-        <NorthStarThemeProvider>
-            <Header title="Single Stack Full Stack Exmaple" />
-            <h2>{helloWorld}</h2>
-        </NorthStarThemeProvider>
+        <ContentLayout
+            header={
+                <SpaceBetween size="m">
+                    <Header variant="h1">Single Stack Full Stack Example</Header>
+                </SpaceBetween>
+            }
+        >
+            <Container>
+                <h2>{helloWorld}</h2>
+            </Container>
+        </ContentLayout>
     );
 };
 
