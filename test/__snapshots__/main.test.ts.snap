@@ -37,7 +37,16 @@ Object {
       "ap-southeast-4": Object {
         "value": "nodejs20.x",
       },
+      "ap-southeast-5": Object {
+        "value": "nodejs20.x",
+      },
+      "ap-southeast-7": Object {
+        "value": "nodejs20.x",
+      },
       "ca-central-1": Object {
+        "value": "nodejs20.x",
+      },
+      "ca-west-1": Object {
         "value": "nodejs20.x",
       },
       "cn-north-1": Object {
@@ -51,6 +60,9 @@ Object {
       },
       "eu-central-2": Object {
         "value": "nodejs20.x",
+      },
+      "eu-isoe-west-1": Object {
+        "value": "nodejs18.x",
       },
       "eu-north-1": Object {
         "value": "nodejs20.x",
@@ -77,6 +89,9 @@ Object {
         "value": "nodejs20.x",
       },
       "me-south-1": Object {
+        "value": "nodejs20.x",
+      },
+      "mx-central-1": Object {
         "value": "nodejs20.x",
       },
       "sa-east-1": Object {
@@ -1107,7 +1122,7 @@ Object {
           "S3Bucket": Object {
             "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
           },
-          "S3Key": "da12b5adcf3ee89587bf8ab998288c06207259b048094213473e072ecf0524d7.zip",
+          "S3Key": "5b56346578cd40ba4eb833c2e72a1bafcc6b7d5c7f3982720c9158f4c27ea439.zip",
         },
         "Environment": Object {
           "Variables": Object {
